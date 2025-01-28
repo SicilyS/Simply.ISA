@@ -1,0 +1,15 @@
+
+start:
+		BRA L1
+L1:	ADD X2, X1
+		LDI X0, -1
+		ADD X3, X0
+		LDI X0, 0
+L2:	BZ X1 = 0 L3
+		ADD X0, X2
+		ADD X1,X3
+		BRA L2
+L3:	ADD X0, X2
+		NEG X2
+		ADD X2, X0
+		HLT
